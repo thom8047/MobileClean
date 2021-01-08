@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.Linq;
 
+//note
+
 namespace Mobile
 {
     class Display
