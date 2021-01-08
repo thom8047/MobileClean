@@ -6,11 +6,9 @@ namespace Mobile
 {
     public partial class MainPage : ContentPage
     {
-        public void getButtons()
+        public void Display()
         {
-            /* Change in the Reader class to create a button with every read, the text of the button and the content or link of 
-            button and append to a list of buttons that gets returned. With this returned list we can put each button inside a 
-            scroll view and from there see if it'll open with the Open class I wrote in.*/
+            // Figure it out.
         }
         public MainPage()
         {
@@ -31,35 +29,16 @@ namespace Mobile
             };
             var stack = new StackLayout();
             var scroll = new ScrollView();
-            var scrollStack = new StackLayout();
-            scroll.Content = scrollStack;
             stack.BackgroundColor = Color.FromHex("#424242");
             Content = stack;
             stack.Children.Add(frame);
             stack.Children.Add(scroll);
 
-            // Let's get Buttons
-            var obj = new Reader();
-            var button_data = obj.CSV();
 
-            foreach (var piece in button_data)
-            {
-                var button = new Button
-                {
-                    // Physical look of buttons
-                    Text = piece.ButtonName,
-                    FontSize = 32,
-                    VerticalOptions = LayoutOptions.Center,
-                    CornerRadius = 0,
-                    BackgroundColor = Color.FromHex("#42D7D6"),
-                    TextColor = Color.White,
-                };
-                button.Clicked += async (s, e) =>
-                {
-                    await Browser.OpenAsync(piece.Link);
-                };
-                scrollStack.Children.Add(button);
-            }
+            //Get DisplayObject and get buttons
+
+            var DisplayObject = new Display();
+            DisplayObject.GetMainPage(scroll, stack);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Mobile
             {
                 FormName = form_name,
                 ButtonName = button_name,
-                Link = link
+                Link = link,
             };
 
             return button;
