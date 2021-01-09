@@ -11,6 +11,8 @@ namespace Mobile
 {
     class Display
     {
+        public string button_color = "#CD5C5C";
+        public string back_button_color = "#CD5C5C";
         public List<ButtonData> GetButtonData()
         {
             var obj = new Reader();
@@ -52,7 +54,7 @@ namespace Mobile
                         FontSize = 32,
                         VerticalOptions = LayoutOptions.Center,
                         CornerRadius = 0,
-                        BackgroundColor = Color.FromHex("#42D7D6"),
+                        BackgroundColor = Color.FromHex(button_color),
                         TextColor = Color.White,
                     };
                     button.Clicked += async (s, e) =>
@@ -105,7 +107,7 @@ namespace Mobile
                     FontSize = 32,
                     VerticalOptions = LayoutOptions.Center,
                     CornerRadius = 0,
-                    BackgroundColor = Color.FromHex("#42D7D6"),
+                    BackgroundColor = Color.FromHex(button_color),
                     TextColor = Color.White,
                 };
                 category_button.Clicked += (s, e) =>
